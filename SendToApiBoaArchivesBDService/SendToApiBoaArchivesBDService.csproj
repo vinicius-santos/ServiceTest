@@ -52,11 +52,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DBModels\ConfigDB.cs" />
-    <Compile Include="Enums\DBConfigurations\ConfigToOracleDBEnum.cs" />
-    <Compile Include="Enums\TimeConfigEnum\TimeConfigEnum.cs" />
-    <Compile Include="Models\Market.cs" />
-    <Compile Include="Models\ConfigDate.cs" />
-    <Compile Include="Models\TimeVerify.cs" />
+    <Compile Include="DBConfigurations\ConfigParametersOracleDB.cs" />
+    <Compile Include="Import\ImportDates.cs" />
+    <Compile Include="Models\JsonValues.cs" />
+    <Compile Include="Utils\TimeVerify.cs" />
     <Compile Include="ServiceMarket.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -73,10 +72,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="DBModels\JsonsConfig\Markets\BoaConfig.json" />
+    <None Include="JsonsConfig\Markets\BoaConfig.json" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Export\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

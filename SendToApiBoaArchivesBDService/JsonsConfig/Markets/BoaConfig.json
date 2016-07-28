@@ -1,0 +1,26 @@
+﻿[
+  {
+    "title": "Config Boa Market",
+    "typeDB": "Oracle",
+    "day": "Thrusday",
+    "hour": "21",
+    "minutes":"00" ,
+    "export": "OnlyOffers"
+  },
+  {
+    "title": "Config Boa Market",
+    "typeDB": "Oracle",
+    "day": "Thrusday",
+    "hour": "14",
+    "minutes":"00",
+    "export": "OffesrAndProducts"
+  },
+  {
+    "title": "Config Boa Market",
+    "typeDB": "Oracle",
+    "day": "Thursday",
+    "hour": "15",
+    "minutes": "14",
+    "export": "OnlyProducts"
+  }
+]

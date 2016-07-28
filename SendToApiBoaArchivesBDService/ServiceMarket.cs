@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SendToApiBoaArchivesBDService.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,6 +19,7 @@ namespace SendToApiBoaArchivesBDService
 
         protected override void OnStart(string[] args)
         {
+            System.Diagnostics.Debugger.Launch();
         }
 
         protected override void OnStop()
@@ -26,7 +28,8 @@ namespace SendToApiBoaArchivesBDService
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-
+            string task = @"../../DBModels/JsonsConfig/Markets/BoaConfig.json";
+            bool run = TimeVerify.verifyRunTask(task);
         }
     }
 }

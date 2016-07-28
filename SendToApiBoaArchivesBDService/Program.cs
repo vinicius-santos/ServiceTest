@@ -1,5 +1,7 @@
-﻿using System;
+﻿using SendToApiBoaArchivesBDService.Models;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.ServiceProcess;
 using System.Text;
@@ -13,12 +15,19 @@ namespace SendToApiBoaArchivesBDService
         /// </summary>
         static void Main()
         {
-            ServiceBase[] ServicesToRun;
-            ServicesToRun = new ServiceBase[]
+            //ServiceBase[] ServicesToRun;
+            //ServicesToRun = new ServiceBase[]
+            //{
+            //    new ServiceMarket()
+            //};
+            //ServiceBase.Run(ServicesToRun);
+
+            string task = @"../../DBModels/JsonsConfig/Markets/BoaConfig.json";
+            bool run = TimeVerify.verifyRunTask(task);
+            if (run)
             {
-                new ServiceMarket()
-            };
-            ServiceBase.Run(ServicesToRun);
+
+            }
         }
     }
 }
