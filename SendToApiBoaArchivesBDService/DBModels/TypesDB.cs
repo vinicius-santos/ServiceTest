@@ -8,6 +8,5 @@ namespace SendToApiBoaArchivesBDService.DBModels
     public static class TypesDB
     {
         public const string ORACLE = "Oracle";
-
     }
 }

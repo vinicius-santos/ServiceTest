@@ -7,10 +7,9 @@ using System.Text;
 
 namespace SendToApiBoaArchivesBDService.Models
 {
-
     /*
      Recebe o json com as configurações do mercado e verifica se o dia  hora condizem com o esperado se sim retorna true.
-         */
+     */
 
     public class TimeVerify
     {
@@ -34,7 +33,7 @@ namespace SendToApiBoaArchivesBDService.Models
                     int Minutes = Convert.ToInt16(marketDates.Minutes);
                     if ((DiaSemana.Equals(Day)) && (date.Hour.Equals(Hour)) && (date.Minute.Equals(Minutes)))
                     {
-                        return marketDates.TypeDB;
+                        return marketDates.TypeDB+":"+marketDates.Type_Export;
                     }
                     else
                     {

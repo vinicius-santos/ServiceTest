@@ -57,7 +57,7 @@
     <Compile Include="DBModels\TypeSearchMarket.cs" />
     <Compile Include="Import\ImportDates.cs" />
     <Compile Include="Models\JsonValues.cs" />
-    <Compile Include="Utils\TimeVerify.cs" />
+    <Compile Include="Utils\RunVerify.cs" />
     <Compile Include="ServiceMarket.cs">
       <SubType>Component</SubType>
     </Compile>

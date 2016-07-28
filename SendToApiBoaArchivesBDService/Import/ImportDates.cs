@@ -14,12 +14,12 @@ namespace SendToApiBoaArchivesBDService.Import
      */
     public class ImportDates
     {
-        public static void importValuesDB(IDbConnection conn, string typeDB)
+        public static void importValuesDB(IDbConnection conn, string typeDB, string typeSearch)
         {
             switch (typeDB)
             {
                 case TypesDB.ORACLE:
-                    GetOracleData(conn);
+                    GetOracleData(conn, typeSearch);
                     break;
                 default:
                     break;
@@ -27,9 +27,16 @@ namespace SendToApiBoaArchivesBDService.Import
             }
         }
 
-        public static void GetOracleData(IDbConnection conn)
+        public static void GetOracleData(IDbConnection conn, string typeSearch)
         {
+            switch (typeSearch)
+            {
+                case TypeSearchMarket.ONLY_OFFERS:
+                    break;
 
+                default:
+                    break;
+            }
 
         }
     }
