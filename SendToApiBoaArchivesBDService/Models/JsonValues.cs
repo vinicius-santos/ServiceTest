@@ -12,9 +12,6 @@ namespace SendToApiBoaArchivesBDService.Models
         public string Day { get; set; }
         public string Hour { get; set; }
         public string Minutes { get; set; }
-
         public string Type_Export { get; set; }
-
-
     }
 }

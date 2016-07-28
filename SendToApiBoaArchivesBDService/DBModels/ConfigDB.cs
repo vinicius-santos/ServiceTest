@@ -27,9 +27,6 @@ namespace SendToApiBoaArchivesBDService.DBModels
                 default:
                     return null;
             }
-
-
         }
-
     }
 }

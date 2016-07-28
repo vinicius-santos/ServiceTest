@@ -29,11 +29,14 @@ namespace SendToApiBoaArchivesBDService
             //Only for test my friends......
 
             string task = @"../../DBModels/JsonsConfig/Markets/BoaConfig.json";
-            string RunInDB = TimeVerify.verifyRunTask(task);
-            if (!String.IsNullOrEmpty(RunInDB))
+            string configRun = TimeVerify.verifyRunTask(task);
+            if (!String.IsNullOrEmpty(configRun))
             {
-                IDbConnection conn =  ConfigDB.GetConnectionDB(RunInDB);
-                ImportDates.importValuesDB(conn, RunInDB);
+                var TypeDB = configRun.Split(':')[0];
+                var TypeSearch = configRun.Split(':')[1];
+                IDbConnection conn = ConfigDB.GetConnectionDB(TypeDB);
+                ImportDates.importValuesDB(conn, TypeDB, TypeSearch);
+
             }
         }
     }
