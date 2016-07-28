@@ -5,7 +5,7 @@
     "day": "Thrusday",
     "hour": "21",
     "minutes":"00" ,
-    "export": "OnlyOffers"
+    "export": "Only_Offers"
   },
   {
     "title": "Config Boa Market",
@@ -13,7 +13,7 @@
     "day": "Thrusday",
     "hour": "14",
     "minutes":"00",
-    "export": "OffesrAndProducts"
+    "export": "Only_Products"
   },
   {
     "title": "Config Boa Market",
@@ -21,6 +21,6 @@
     "day": "Thursday",
     "hour": "15",
     "minutes": "14",
-    "export": "OnlyProducts"
+    "export": "Products_And_Offers"
   }
 ]

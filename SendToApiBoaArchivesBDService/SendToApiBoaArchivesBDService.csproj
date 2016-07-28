@@ -53,6 +53,8 @@
   <ItemGroup>
     <Compile Include="DBModels\ConfigDB.cs" />
     <Compile Include="DBConfigurations\ConfigParametersOracleDB.cs" />
+    <Compile Include="DBModels\TypesDB.cs" />
+    <Compile Include="DBModels\TypeSearchMarket.cs" />
     <Compile Include="Import\ImportDates.cs" />
     <Compile Include="Models\JsonValues.cs" />
     <Compile Include="Utils\TimeVerify.cs" />

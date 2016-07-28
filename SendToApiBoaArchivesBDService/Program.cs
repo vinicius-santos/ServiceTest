@@ -1,6 +1,9 @@
-﻿using SendToApiBoaArchivesBDService.Models;
+﻿using SendToApiBoaArchivesBDService.DBModels;
+using SendToApiBoaArchivesBDService.Import;
+using SendToApiBoaArchivesBDService.Models;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.IO;
 using System.Linq;
 using System.ServiceProcess;
@@ -22,11 +25,15 @@ namespace SendToApiBoaArchivesBDService
             //};
             //ServiceBase.Run(ServicesToRun);
 
-            string task = @"../../DBModels/JsonsConfig/Markets/BoaConfig.json";
-            bool run = TimeVerify.verifyRunTask(task);
-            if (run)
-            {
 
+            //Only for test my friends......
+
+            string task = @"../../DBModels/JsonsConfig/Markets/BoaConfig.json";
+            string RunInDB = TimeVerify.verifyRunTask(task);
+            if (!String.IsNullOrEmpty(RunInDB))
+            {
+                IDbConnection conn =  ConfigDB.GetConnectionDB(RunInDB);
+                ImportDates.importValuesDB(conn, RunInDB);
             }
         }
     }

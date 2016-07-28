@@ -1,4 +1,6 @@
-﻿using SendToApiBoaArchivesBDService.Models;
+﻿using SendToApiBoaArchivesBDService.DBModels;
+using SendToApiBoaArchivesBDService.Import;
+using SendToApiBoaArchivesBDService.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -29,7 +31,12 @@ namespace SendToApiBoaArchivesBDService
         private void timer1_Tick(object sender, EventArgs e)
         {
             string task = @"../../DBModels/JsonsConfig/Markets/BoaConfig.json";
-            bool run = TimeVerify.verifyRunTask(task);
+            string RunInDB = TimeVerify.verifyRunTask(task);
+            if (!String.IsNullOrEmpty(RunInDB))
+            {
+                IDbConnection conn = ConfigDB.GetConnectionDB(RunInDB);
+                ImportDates.importValuesDB(conn, RunInDB);
+            }
         }
     }
 }

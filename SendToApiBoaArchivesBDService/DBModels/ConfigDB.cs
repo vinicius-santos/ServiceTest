@@ -1,4 +1,5 @@
 ﻿using Oracle.ManagedDataAccess.Client;
+using SendToApiBoaArchivesBDService.DBModels;
 using SendToApiBoaArchivesBDService.DBModels.DBConfigurations;
 using System;
 using System.Collections.Generic;
@@ -14,19 +15,14 @@ namespace SendToApiBoaArchivesBDService.DBModels
      */
     public class ConfigDB
     {
-        private readonly string ORACLE = "Oracle";
-        private readonly string SQL_SERVER = "Sql_Server";
-
-
-        public IDbConnection OpenDB(string typeDB)
+        public static IDbConnection GetConnectionDB(string typeDB)
         {
             string strCon;
             switch (typeDB)
             {
-                case "Oracle":
+                case TypesDB.ORACLE:
                     strCon = ConfigToOracleDBEnum.USER + "/" + ConfigToOracleDBEnum.PASSWORD + "@//" + ConfigToOracleDBEnum.DBSERVERHOST + "/" + ConfigToOracleDBEnum.SERVICENAME;
                     OracleConnection conn = new OracleConnection(strCon);
-                    conn.Open();
                     return conn;
                 default:
                     return null;

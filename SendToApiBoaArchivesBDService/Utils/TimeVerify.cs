@@ -14,7 +14,7 @@ namespace SendToApiBoaArchivesBDService.Models
 
     public class TimeVerify
     {
-        public static bool verifyRunTask(string jsonParameters)
+        public static string verifyRunTask(string jsonParameters)
         {
             List<JsonValues> DateConfigs;
             DateTime date = DateTime.Now;
@@ -34,7 +34,7 @@ namespace SendToApiBoaArchivesBDService.Models
                     int Minutes = Convert.ToInt16(marketDates.Minutes);
                     if ((DiaSemana.Equals(Day)) && (date.Hour.Equals(Hour)) && (date.Minute.Equals(Minutes)))
                     {
-                        return true;
+                        return marketDates.TypeDB;
                     }
                     else
                     {
@@ -45,16 +45,15 @@ namespace SendToApiBoaArchivesBDService.Models
                 {
                     if (date.DayOfWeek.ToString().Equals(Day) && (date.Hour.Equals(Hour)))
                     {
-                        return true;
+                        return marketDates.TypeDB;
                     }
                     else
                     {
                         continue;
                     }
                 }
-
             }
-            return false;
+            return null;
         }
     }
 }

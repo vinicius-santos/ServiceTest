@@ -7,10 +7,10 @@ namespace SendToApiBoaArchivesBDService.DBModels.DBConfigurations
 {
     public static class ConfigToOracleDBEnum
     {
-        public static readonly string USER = "vinicius";
-        public static readonly string PASSWORD = "123";
-        public static readonly string DBSERVERHOST = "localhost:1521";
-        public static readonly string SERVICENAME = "ServiceDBOracle";
+        public const string USER = "vinicius";
+        public const string PASSWORD = "123";
+        public const string DBSERVERHOST = "localhost:1521";
+        public const string SERVICENAME = "ServiceDBOracle";
 
 
 
