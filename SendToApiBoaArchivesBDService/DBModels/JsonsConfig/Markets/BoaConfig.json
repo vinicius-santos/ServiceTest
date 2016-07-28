@@ -1,0 +1,36 @@
+﻿{
+  "title": "Config Boa Market",
+  "ConfigDates": [
+    {
+      "Days": [
+        "Sunday",
+        "Thursday"
+      ],
+      "Hours": [
+        "10:00",
+        "12:00"
+      ],
+
+      "Exports": [
+        "Offer"
+      ]
+
+    },
+    {
+      "Days": [
+
+        "Monday",
+        "Thursday"
+      ],
+      "Hours": [
+        "11:00",
+        "14:00"
+      ],
+
+      "Exports": [
+        "Offer",
+        "Products"
+      ]
+    }
+  ]
+}
